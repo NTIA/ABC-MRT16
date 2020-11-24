@@ -37,7 +37,7 @@ Unless backwards compatibility is required, ABC-MRT16 is the recommended
 algorithm, even if only narrowband conditions are to be tested. The 
 attention model makes it superior to ABC-MRT.
 
-The software provided here runs in the [Matlab](http://mathworks.com) or 
+The software provided here runs in the [ Matlab®](http://mathworks.com) or 
 [Octave](http://www.gnu.org/software/octave) environments.
 
 Application of ABC-MRT(16) to a speech communication system-under-test (SUT) 
@@ -53,7 +53,7 @@ provides an example for getting started.
 ## Prepare SUT Recordings 
 
 ### Locate Reference recordings
-The SourceAudio folder contains 1200 `.wav files`. The 
+The SourceAudio folder contains 1200 `.wav` files. The 
 naming convention is `TT_bnn_wm_orig.wav`. `TT={F1,F3,M3,M4}` to indicate the 
 talker, `nn` is an two digit integer 01 to 50 to indicate the MRT block or 
 list, and `m` is a single-digit integer 1 to 6 to indicate the word within 
@@ -160,24 +160,24 @@ and the call to `ABC_MRT16.m` is:
 [phi_hat, success]=ABC_MRT16(speech_path,cond_num,n_files,verbose)
 ```
 
- - speech_path is a string that gives the path to the speech files
+ - `speech_path` is a string that gives the path to the speech files
 
- - cond_num is the condition number, 0 to 99. This is used to form the end 
+ - `cond_num` is the condition number, 0 to 99. This is used to form the end 
 of the path and the filenames as specified below.
 
- - n_files is the number of speech files to use, 16 <= N <= 1200. Using 
+ - `n_files` is the number of speech files to use, 16 <= N <= 1200. Using 
 more speech files gives a more robust result, but takes longer. One can 
-use filelist.m to generate the list of .wav files required for any value 
-of n_files.
+use `filelist.m` to generate the list of `.wav` files required for any value 
+of `n_files`.
 
- - verbose is set to any nonzero value to force progress reporting
+ - `verbose` is set to any nonzero value to force progress reporting
 
- - success is a column vector with length n_files that gives the success 
+ - `success` is a column vector with length n_files that gives the success 
 rate for each file involved in the test.
 
- - phi_hat is a scalar that gives the final intelligibility estimate for 
-the condition. phi_hat is expected to range from 0 to 1, similar to MRT
-results. Larger values of phi_hat indicate higher levels of speech
+ - `phi_hat` is a scalar that gives the final intelligibility estimate for 
+the condition. `phi_hat` is expected to range from 0 to 1, similar to MRT
+results. Larger values of `phi_hat` indicate higher levels of speech
 intelligibility
 
 `ABC_MRT.m` and `ABC_MRT16.m` expect a specific file naming convention. Here are some 
@@ -238,29 +238,3 @@ www.its.bldrdoc.gov/audio.
 
 [<b id="f3">3</b>] ANSI S3.2, "American national standard method for measuring the 
 intelligibility of speech over communication systems," 1989.
-
-
-## Legal
-THE NATIONAL TELECOMMUNICATIONS AND INFORMATION ADMINISTRATION, INSTITUTE 
-FOR TELECOMMUNICATION SCIENCES ("NTIA/ITS") DOES NOT MAKE ANY WARRANTY OF 
-ANY KIND, EXPRESS, IMPLIED OR STATUTORY, INCLUDING, WITHOUT LIMITATION, 
-THE IMPLIED WARRANTY OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, 
-NON-INFRINGEMENT AND DATA ACCURACY. THIS SOFTWARE IS PROVIDED "AS IS." 
-NTIA/ITS does not warrant or make any representations regarding the use of 
-the software or the results thereof, including but not limited to the 
-correctness, accuracy, reliability or usefulness of the software or the 
-results.
-
-You can use, copy, modify, and redistribute the NTIA/ITS developed 
-software upon your acceptance of these terms and conditions and upon your 
-express agreement to provide appropriate acknowledgments of NTIA's 
-ownership of and development of the software by keeping this exact text 
-present in any copied or derivative works.
-
-The user of this Software ("Collaborator") agrees to hold the U.S. 
-Government harmless and indemnifies the U.S. Government for all 
-liabilities, demands, damages, expenses, and losses arising out of
-the use by the Collaborator, or any party acting on its behalf, of 
-NTIA/ITS' Software, or out of any use, sale, or other disposition by the 
-Collaborator, or others acting on its behalf, of products made
-by the use of NTIA/ITS' Software.
