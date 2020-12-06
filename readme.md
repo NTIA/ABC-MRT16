@@ -37,7 +37,7 @@ Unless backwards compatibility is required, ABC-MRT16 is the recommended
 algorithm, even if only narrowband conditions are to be tested. The 
 attention model makes it superior to ABC-MRT.
 
-The software provided here runs in the [ Matlab®](http://mathworks.com) or 
+The software provided here runs in the [Matlab®](http://mathworks.com) or 
 [Octave](http://www.gnu.org/software/octave) environments.
 
 Application of ABC-MRT(16) to a speech communication system-under-test (SUT) 
