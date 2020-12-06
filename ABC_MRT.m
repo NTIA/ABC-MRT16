@@ -218,7 +218,7 @@ function x=get_speech(path_and_filename)
 minlen=42000;
 
 try
-    [x,fs,nbits]=wavread(path_and_filename);
+    [x,fs]=audioread(path_and_filename);
     nofile=0;
 catch
     display(['Cannot load ',path_and_filename,'.'])
@@ -228,7 +228,7 @@ end
 if nofile==0
     nsamples=size(x,1);
     nchannels=size(x,2);
-    if fs~=48000 || nbits < 16 || nchannels > 1 || nsamples < minlen
+    if fs~=48000 || nchannels > 1 || nsamples < minlen
         display(['The file ',path_and_filename,' is not in the proper format.'])
         badformat=1;
     else
