@@ -50,9 +50,22 @@ describe the intelligibility of the SUT.
 Full details for each step follow. In addition, a small demonstration 
 provides an example for getting started.
 
-## Prepare SUT Recordings 
+## Prepare SUT Recordings
 
-### Locate Reference recordings
+### Using `git-lfs` to Download Reference Recordings
+The reference recordings in this repository are stored on GitHub using 
+`git-lfs`. This means that the computer cloning this repo must have `git-lfs`
+installed in order to properly download the reference recordings.
+
+*Before cloning this repo, download, install, and initialize
+[`git-lfs`](https://git-lfs.github.com).*
+
+If you have cloned this repo before installing `git-lfs`, issuing the command
+`git lfs pull` may properly download the reference recordings. As a last
+resort, cloning the repo to a new location after installing `git-lfs` will
+download the reference recordings.
+
+### Locate Reference Recordings
 The SourceAudio folder contains 1200 `.wav` files. The 
 naming convention is `TT_bnn_wm_orig.wav`. `TT={F1,F3,M3,M4}` to indicate the 
 talker, `nn` is an two digit integer 01 to 50 to indicate the MRT block or 
