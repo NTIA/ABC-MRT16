@@ -57,8 +57,8 @@ The reference recordings in this repository are stored on GitHub using
 `git-lfs`. This means that the computer cloning this repo must have `git-lfs`
 installed in order to properly download the reference recordings.
 
-*Before cloning this repo, download, install, and initialize
-[`git-lfs`](https://git-lfs.github.com).*
+**Before cloning this repo, download, install, and initialize
+[`git-lfs`](https://git-lfs.github.com).**
 
 If you have cloned this repo before installing `git-lfs`, issuing the command
 `git lfs pull` may properly download the reference recordings. As a last
