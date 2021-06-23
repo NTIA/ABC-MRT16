@@ -60,6 +60,9 @@ installed in order to properly download the reference recordings.
 **Before cloning this repo, download, install, and initialize
 [`git-lfs`](https://git-lfs.github.com).**
 
+**For the time being, GitHub does not correctly include the reference
+recordings when downloading the code as a `.zip` file.**
+
 If you have cloned this repo before installing `git-lfs`, issuing the command
 `git lfs pull` may properly download the reference recordings. As a last
 resort, cloning the repo to a new location after installing `git-lfs` will
